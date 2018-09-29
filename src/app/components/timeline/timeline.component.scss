@@ -1,0 +1,410 @@
+$primaryColor: #2196F3;
+$backgroundColor: #F5F7FD;
+$gray: rgba(0, 0, 0, 0.44);
+
+.mat-expansion-panel {
+  background: transparent;
+}
+
+.mat-expansion-panel-spacing {
+  margin: 0;
+}
+
+mat-expansion-panel-header {
+  padding: 0 !important;
+
+  .progress {
+    width: 70px;
+    margin-right: 55px;
+    display: none !important;
+
+    .percent {
+      /* CLOSE: */
+      opacity: 0.76;
+      font-family: AvenirNext-Medium;
+      font-size: 10px;
+      color: #5A5A5A;
+      letter-spacing: .6px;
+      padding-left: 10px;
+    }
+  }
+}
+
+.timeline-headers-align .mat-expansion-panel-header-title,
+.timeline-headers-align .mat-expansion-panel-header-description,
+.timelineicon {
+  flex-basis: 0;
+}
+
+.timeline-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mat-list span{
+    .lowerdivider{
+        display: none;
+    }   
+   }
+   
+   .mat-list span:last-child{
+       .lowerdivider{
+           display: flex;
+       }  
+   }
+   
+.icon {
+
+  width: 35px;
+  height: 100%;
+  text-align: center;
+
+  &__circle {
+    width: 13px;
+    height: 13px;
+    border: 1.5px solid #9696AE;
+    border-radius: 50%;
+    background-color: $backgroundColor;
+    transition: all 0.25s ease;
+    // background-color: $primaryColor;
+
+  }
+}
+
+.timeline {
+  &_inner {
+    position: relative;
+
+
+  }
+}
+
+.progress_line {
+  svg {
+    height: 100%;
+  }
+
+  width: 2px;
+  height: 100%;
+  // margin: auto
+  // padding-left: 7px;
+  //  left: 0;
+  // top: 0;
+}
+
+.icon__circle {
+  margin: auto;
+  background-color: $backgroundColor;
+}
+
+.title {
+  font-family: AvenirNext-Regular;
+  font-size: 14px;
+  color: $primaryColor;
+  letter-spacing: 0.2px;
+  padding-left: 10px;
+
+}
+
+
+
+
+.completed {
+
+  .title {
+    /* Credit: */
+
+  }
+
+  .icon__circle {
+
+    width: 15.5px;
+    height: 15.5px;
+    border: 1.5px solid $primaryColor;
+    border-radius: 50%;
+    background-color: $primaryColor !important;
+    background-image: url('../../../assets/iconcheck.svg') !important;
+    background-size: 65% 65%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+
+
+  }
+
+  .progress_line {
+    svg {
+      line {
+        stroke: $primaryColor;
+        stroke-width: 5;
+        stroke-dasharray: (0);
+      }
+    }
+  }
+}
+
+.inprogress {
+
+  .title {
+    opacity: 1;
+    font-family: AvenirNext-Medium;
+    font-size: 14px;
+    color: $primaryColor;
+    letter-spacing: 0.2px;
+  }
+
+
+  .icon__circle {
+
+    width: 13px;
+    height: 13px;
+    border: 1px solid $primaryColor;
+    border-radius: 50%;
+    background-color: $backgroundColor;
+
+    background-image: url('../../../assets/iconprogress.svg');
+    background-size: 65% 65%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+  }
+
+  .progress_line {
+    svg {
+      line {
+        stroke-width: 5;
+        stroke-dasharray: (3, 3);
+        stroke: $primaryColor;
+      }
+    }
+  }
+
+}
+
+.notstarted {
+
+  .title {
+    opacity: 0.45;
+    font-family: AvenirNext-Regular;
+    font-size: 14px;
+    color: #1E1D4D;
+    letter-spacing: 0.2px;
+
+  }
+
+  .icon__circle {
+
+    width: 13px;
+    height: 13px;
+    border: 1.5px solid #9696AE;
+    border-radius: 50%;
+
+    .progress_line {
+      svg {
+        line {
+          stroke: #9696AE;
+          stroke-width: 2;
+          stroke-dasharray: (3, 3);
+
+
+        }
+      }
+    }
+
+
+  }
+
+  .progress_line {
+    svg {
+      line {
+        stroke: #9696AE;
+        stroke-width: 5;
+        stroke-dasharray: (3, 3);
+
+      }
+    }
+  }
+
+}
+
+.progress_line_header,
+  {
+  width: 35px;
+  text-align: center;
+
+  .progress_line {
+    height: 20px;
+    margin: auto;
+  }
+}
+
+.timeline_inner {
+  .progress_line {
+    width: 35px;
+    text-align: center;
+  }
+}
+
+.timeline__header__row {
+  width: 100%;
+}
+
+mat-expansion-panel:first-child {}
+
+mat-expansion-panel:last-child {
+  mat-expansion-panel-header {
+    .progress_line {
+      opacity: 0;
+    }
+  }
+
+  mat-expansion-panel-header {}
+}
+
+.timeline__header__row__line {
+  //   display: none;
+  transition: all 0.25s ease;
+}
+
+.mat-expanded {
+
+  .timeline__header__row__line {
+    .progress_line {
+      opacity: 1;
+    }
+  }
+
+  .title {
+    opacity: 1;
+    color: $primaryColor;
+    font-family: AvenirNext-DemiBold;
+  }
+
+  .icon__circle {
+
+    width: 30px;
+    height: 30px;
+    border: 1px solid $primaryColor;
+    background-color: $backgroundColor;
+    // border-radius: 50%;
+    //  background-color: white;
+
+    background-image: url('../../../assets/iconedit.svg');
+    background-size: 60% 60%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+
+  }
+
+  .timeline__header__row__line {
+    // height: 0 !important;
+    // overflow: hidden;
+  }
+
+  .progress {
+    display: flex !important;
+  }
+
+  .progress_line {
+    stroke: $primaryColor;
+
+    svg {
+      line {
+        stroke: $primaryColor;
+        //  stroke-width: 5;
+      }
+    }
+  }
+
+}
+
+.subtimeline {
+
+  &__title {
+    opacity: 0.45;
+    font-family: AvenirNext-Medium;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0.4px;
+  }
+
+  mat-divider {
+    border-top-style: dashed;
+  }
+
+  flex-grow: 1;
+  margin-right: 30px;
+
+  .completed {
+    .progress_submenue {
+      visibility: visible;
+
+      /* COMPLETE: */
+
+      font-family: Roboto-Regular;
+      font-size: 10px;
+      color: $gray;
+      text-transform: uppercase;
+      letter-spacing: 1.35px;
+
+
+    }
+  }
+
+  .progress_submenue {
+   
+
+   
+  }
+
+  .infoneeded {
+    .progress_submenue {}
+  }
+}
+
+.progress_submenue {
+  position: relative;
+  width: 105px;
+  .progress_submenue_icon {
+   
+    width: 25px;
+    color: $gray;
+  }
+  .progress_submenue_title{
+      text-align: left;
+     // font-family: Roboto-Regular;
+      font-family: AvenirNext-DemiBold;
+      font-size: 10px;
+      color: $gray;
+      text-transform: uppercase;
+      letter-spacing: 1.35px;
+  }
+
+}
+
+.completed_sub {
+  .progress_submenue {
+
+    .progress_submenue_icon {
+      color: $primaryColor;
+      
+    }
+
+  }
+}
+
+
+
+
+.infoneeded {
+    .progress_submenue {
+  
+      .progress_submenue_icon {
+       
+      }
+  
+    }
+  }
+
+

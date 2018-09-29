@@ -1,0 +1,40 @@
+@import '~@angular/material/theming';
+@include mat-core();
+@import 'styles/colors.scss';
+@import 'styles/fonts.scss';
+$lynx-primary: mat-palette($md-lynxblue, 500);
+$lynx-accent: mat-palette($md-lynxblue-green, 500);
+$lynx-green: mat-palette($md-lynxaccentblue, 500);
+
+$lynx-theme: mat-light-theme($lynx-primary, $lynx-accent);
+$avn-typography: mat-typography-config( $font-family: 'AVN', $headline: mat-typography-level(32px, 48px, 700), $body-1: mat-typography-level(16px, 24px, 500));
+@include mat-base-typography($avn-typography);
+@include mat-checkbox-typography($avn-typography);
+@include mat-tabs-typography($avn-typography);
+@include mat-button-typography($avn-typography);
+@include angular-material-theme($lynx-theme);
+.primary-color {
+    color: mat-color($lynx-primary);
+}
+
+.accent-color {
+    color: mat-color($lynx-accent);
+}
+
+h1 {
+    color: mat-color($lynx-primary);
+    font-family: 'AVN';
+}
+
+.f-20 {
+    font-size: 20px;
+}
+
+.color-gray {
+    color: gray;
+}
+
+body {
+    font-family: 'AVN';
+    background-color: #F5F7FD;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="9px" viewBox="0 0 12 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>iconcheckblue</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="new-header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconcheckblue" transform="translate(0.000000, -1.000000)" fill-rule="nonzero">
+            <rect id="Rectangle-3" fill="#FFFFFF" opacity="0" x="0" y="0" width="12" height="12"></rect>
+            <path d="M4.34769424,9.3992724 C4.22387639,9.52152293 4.04846778,9.62339837 3.89369547,9.62339837 C3.73892316,9.62339837 3.56351455,9.51642916 3.43453762,9.39417862 L0.545454545,6.54166622 L1.46377024,5.63497478 L3.89885455,8.03923523 L10.3373825,1.63636364 L11.240221,2.5583364 L4.34769424,9.3992724 Z" id="Shape" fill="#2196F3"></path>
+        </g>
+    </g>
+</svg>

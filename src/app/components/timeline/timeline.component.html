@@ -1,0 +1,70 @@
+<mat-accordion displayMode="flat" MatAccordionDisplayMode="flat" class="timeline-headers-align">
+  <mat-expansion-panel [expanded]="i === 0" *ngFor="let timeline_item of timeline; index as i" class="mat-elevation-z0"
+    hideToggle displayMode="flat" MatAccordionDisplayMode="flat">
+
+    <mat-expansion-panel-header [ngClass]="getStatus(timeline_item.status)" collapsedHeight="35px" expandedHeight="50px">
+      <div fxLayout="column" fxFlexFill fxLayoutAlign="start start">
+        <div class="timeline__header__row">
+          <div fxLayout="row" fxFlexFill fxLayoutAlign="space-between center">
+            <div class="icon">
+              <div class="icon__circle"></div>
+            </div>
+            <div class="title" fxFlex>{{timeline_item.title}}</div>
+            <div class="progress" fxLayout="row" fxLayoutAlign="end center">
+              <mat-progress-bar mode="determinate" [color]="color" value="{{timeline_item.progress}}"></mat-progress-bar>
+              <span class="percent">{{timeline_item.progress}}%</span>
+            </div>
+
+          </div>
+        </div>
+        <div fxLayout="row" fxFlexFill fxLayoutAlign="start center" class="timeline__header__row timeline__header__row__line">
+          <div class="progress_line_header">
+            <div class="progress_line ">
+              <svg style="width:0.65px;height:100%">
+                <line x1="100%" y1="0%" x2="0%" y2="100%" style="stroke-width: 5;"></line>
+              </svg>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+    </mat-expansion-panel-header>
+    <div *ngIf="timeline_item.borrowers" class="timeline_inner" [ngClass]="getStatus(timeline_item.status)" fxLayout="row"
+      fxFlexFill fxLayoutAlign="space-between start">
+      <div class="progress_line">
+        <svg style="width:0.65px;height:100%;">
+          <line x1="100%" y1="0%" x2="0%" y2="100%"></line>
+        </svg>
+
+      </div>
+      <div class="timeline_inner_content subtimeline" fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-list fxFlexFill>
+          <span *ngFor="let b of timeline_item.borrowers">
+            <mat-divider></mat-divider>
+            <mat-list-item [ngClass]="{
+                      'completed_sub':b.status==1,
+                      'infoneeded':b.status==2
+                    }"
+              class="completed_sub">
+              <div fxLayout="row" fxFlexFill fxLayoutAlign="space-between center">
+                <div class="subtimeline__title">{{b.name}}</div>
+                <div class="progress_submenue" fxLayout="row" fxLayoutAlign="start center">
+                  <mat-icon inline="true" *ngIf="b.status==1" class="progress_submenue_icon">done</mat-icon>
+                  <mat-icon inline="true" *ngIf="b.status==2" class="progress_submenue_icon">access_time</mat-icon>
+                  <span class="progress_submenue_title">{{getSubBorrowerInfo(b.status)}}</span>
+                </div>
+              </div>
+            </mat-list-item>
+            <mat-divider class="lowerdivider"></mat-divider>
+          </span>
+        </mat-list>
+      </div>
+
+    </div>
+
+  </mat-expansion-panel>
+</mat-accordion>
